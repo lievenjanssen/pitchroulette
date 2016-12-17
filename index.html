@@ -1,0 +1,45 @@
+<html ng-app="app">
+<head>
+    <title>Pitchroulette</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-aria/angular-aria.js"></script>
+    <script src="bower_components/hammerjs/hammer.js"></script>
+    <script src="bower_components/angular-material/angular-material.js"></script>
+    <link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+	<link href='http://fonts.googleapis.com/css?family=Rock+Salt' rel='stylesheet' type='text/css'>
+    <script src="app.js"></script>
+<!--
+    <link rel="stylesheet" href="main.css">
+-->
+</head>
+<body ng-controller="AppCtrl" style="background-color: #33b5e5; margin: 0px; padding: 0px; background-image: url('bg.png'); background-position: right bottom; background-repeat: no-repeat;">
+<div layout="row" style="text-align: left;" ng-click="next()">
+    <div style="text-align: center; width: 670px;">
+		<br/>
+		<p style="font-family: 'Rock Salt', cursive; font-size: 80px; color: white; margin: 0px;">Pitch</p>
+        <span style="position: relative; left: -70; right: 0; top: -20; bottom: 0; height: 100%; font-size: 200px; color: white;">{{pad(seconds, 2)}}</span>
+        <md-progress-circular class="md-warn" value="{{progress}}" md-diameter="300" style="width: 50px; height: 70px; margin-top: 250px; margin-left: -200px;display: inline-block;"></md-progress-circular>
+		<br/>
+		<br/>
+		<br/>
+		<p style="font-family: 'Rock Salt', cursive; font-size: 80px; color: white; margin: 0px;">Roulette</p>
+    </div>
+	<div style="margin: auto; margin-top: 50px;" flex>
+		<md-list>
+			<md-item ng-repeat="item in items">
+				<md-item-content>
+					<div class="md-tile-content" style="padding: 0px;">
+						<!--<h3>{{item.what}}</h3>-->
+						<h4 style="font-family: RobotoDraft, Roboto, 'Helvetica Neue', sans-serif; font-size: 32px; color: red;" ng-if="$index === index">{{item}}</h4>
+						<h4 style="font-family: RobotoDraft, Roboto, 'Helvetica Neue', sans-serif; font-size: 26px; color: white;" ng-if="$index !== index">{{item}}</h4>
+					</div>
+				</md-item-content>
+			</md-item>
+		</md-list>
+	<div>
+</div>
+</body>
+</html>
