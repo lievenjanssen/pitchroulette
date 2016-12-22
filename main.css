@@ -1,15 +1,11 @@
 @keyframes opacityshading{0%{opacity:1}50%{opacity:0}100%{opacity:1}}
 
 body {
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 20px;
     position: relative;
     width: 100%;
     background-image: linear-gradient(166deg,#6FB66C 6%,#F3CE54 99%,#F3CE54 100%);
     clear: both;
     min-height: 290px;
-    margin-top: 30px;
 }
 
 .background-two {
